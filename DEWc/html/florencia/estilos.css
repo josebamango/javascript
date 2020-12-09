@@ -1,0 +1,36 @@
+
+*{
+    background-color: rgb(106, 194, 209);
+
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(218, 23, 16);
+    text-align: center;
+    text-transform: uppercase;
+}
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(59, 22, 77);
+}
+footer>p{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.intro{
+    background-color: bisque;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.flores{
+background-color: thistle;
+}
+
+img{
+    display: block;
+}

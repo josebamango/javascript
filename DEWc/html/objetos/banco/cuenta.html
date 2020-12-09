@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Cuenta corriente</title>
+    <link rel='stylesheet' href='bootstrap-4.5.3-dist\css/bootstrap.min.css'>
+    <script src="claseCuentaCorriente.js"></script>
+    <script src="datosP.js"></script>
+    <script src="creacionCuenta.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-success text-white rounded">Cuenta corriente</p>
+                <form action=" " method="POST " class="border border-success p-2 mb-5 rounded">
+                    <legend class="text-center header text-success bg-dark">Introduce los datos</legend>
+                    <div class="form-group">
+                        <label for="nombre">Introduce el nombre y apellidos:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">Introduce el DNI:</label>
+                        <input type="text" class="form-control" id="dni" name="dni" minlength="9" maxlength="9">
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Introduce la dirección:</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Introduce el telefono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="numero">Introduce el numero de cuenta:</label>
+                        <input type="text" name="numero" id="numero" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="saldo">Introduce el saldo:</label>
+                        <input type="number" name="saldo" id="saldo" class="form-control" />
+                    </div>
+                    <input type="button" name="añadir" id="añadir" value="AÑADIR" class="btn btn-success">
+                    <input type="button" name="aplicar" id="aplicar" value="APLICAR" class="btn btn-success">
+                    <input type="button" name="mostrar" id="mostrar" value="MOSTRAR" class="btn btn-success">
+                    <textarea name="resultado" id="resultado" cols="50" rows="5" class="form-control mt-2"></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

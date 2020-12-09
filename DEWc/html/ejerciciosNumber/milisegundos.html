@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Milisegundos</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <script>
+        function convertirMilisegundos() {
+            var milis = document.getElementById('milis').value;
+            var operaciones = document.getElementById('operaciones').value;
+            var resultado = document.getElementById('resultado');
+            var total = 0;
+            switch (operaciones) {
+                case "segundo":
+                    total = milis / 1000;
+                    resultado.value = milis + " milisegundos son: " + total + " segundos";
+                    break;
+                case "minuto":
+                    total = milis / 60000;
+                    resultado.value = milis + " milisegundos son: " + total + " minutos";
+                    break;
+                case "hora":
+                    total = milis / 3600000;
+                    resultado.value = milis + " milisegundos son: " + total + " horas";
+                    break;
+                case "dia":
+                    total = milis / 86400000;
+                    resultado.value = milis + " milisegundos son: " + total + " dias";
+                    break;
+                case "año":
+                    total = milis / 31536000000;
+                    resultado.value = milis + " milisegundos son: " + total + " años";
+                    break;
+                default:
+                    resultado.value = "Error";
+                    break;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <legend class="text-light bg-dark text-center">Conversiones de milisegundos</legend>
+                    <div class="form-group">
+                        <label for="Fecha">Introduce un dato:</label>
+                        <input type="number" name="milis" id="milis" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="opes">Operaciones:</label>
+                        <select name="operaciones" id="operaciones" class="form-control">
+                            <option value="segundo">A segundos</option>
+                            <option value="minuto">A minutos</option>
+                            <option value="hora">A horas</option>
+                            <option value="dia">A días</option>
+                            <option value="año">A años</option>
+                        </select>
+                    </div>
+                    <input type="button" name="calcular" id="calucular" value="CALCULAR" class="btn btn-success offset-5 mt-3" onclick="convertirMilisegundos()">
+                    <div class="form-group">
+                        <label for="resultado">Resultado:</label>
+                        <input type="text" name="resultado" id="resultado" class="form-control mt-3 bg-success text-light" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

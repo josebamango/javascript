@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario 3</title>
+    <link rel="stylesheet" href="perrosStyle.css">
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <h1>WebPet</h1>
+        <h2>Si desea información, rellene los datos</h2>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" maxlength="40" required placeholder="Introduzca su nombre">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" name="telefono" required maxlength="12" placeholder="Ej: 123-456789" pattern="[0-9]{3}-[0-9]{6}">
+            <label for="email">Email:</label>
+            <input type="email" name="email" required maxlength="30" placeholder="Introduzca su correo electronico">
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" id="fecha">
+        </fieldset>
+        <fieldset>
+            <legend>Razas favoritas</legend>
+            <input list="razas" name="razas" placeholder="Cuéntanos">
+            <datalist id="razas">
+                <option value="Milú">
+                <option value="Lassie">
+                <option value="Rex">
+                <option value="¡Scooby-Doo!">
+                <option value="Beethoven">
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Votación general razas</legend>
+            <label for="Milú">Milú</label>
+            <input type="number" maxlength="10" minlength="1">
+            <label for="Lassie">Lassie</label>
+            <input type="number" maxlength="10" minlength="1">
+            <label for="Rex">Rex</label>
+            <input type="number" maxlength="10" minlength="1">
+            <label for="Scooby">¡Scooby-Doo!</label>
+            <input type="number" maxlength="10" minlength="1">
+            <label for="Beethoven">Beethoven</label>
+            <input type="number" maxlength="10" minlength="1">
+        </fieldset>
+        <fieldset>
+            <legend>Subir fichero</legend>
+            <label for="archivo">Elija  uno de los archivos de su raza favorita</label>
+            <input type="file" multiple name="archivo"><br>
+            <input type="submit" value="Enviar">
+        </fieldset>
+
+
+    </form>
+</body>
+
+</html>

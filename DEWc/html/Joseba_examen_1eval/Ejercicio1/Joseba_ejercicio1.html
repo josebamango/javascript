@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+    <link rel='stylesheet' href='bootstrap-4.5.3-dist\css/bootstrap.min.css'>
+    <script src="scriptEjer1.js"></script>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-success text-white rounded">Resta de fechas</p>
+                <form action=" " method="POST " class="border border-success p-2 mb-5 rounded">
+                    <legend class="text-center header text-success bg-dark">Introduce las fechas</legend>
+                    <div class="form-group">
+                        <label for="fecha1">Introduce la primera fecha:</label>
+                        <input type="date" class="form-control" id="fecha1" name="fecha1">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha2">Introduce la segunda fecha:</label>
+                        <input type="date" class="form-control" id="fecha2" name="fecha2">
+                    </div>
+                    <div class="form-group d-inline">
+                        <input type="button" name="diferencia" id="diferencia" value="Diferencia" class="btn btn-success">
+                        <textarea name="resultadoHoras" id="resultadoHoras" cols="50" readonly rows="5" class="form-control mt-2"></textarea>
+                        <textarea name="resultadoMinutos" id="resultadoMinutos" cols="50" readonly rows="5" class="form-control mt-2"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

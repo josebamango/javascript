@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+    <script src="scriptAgencia.js"></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-primary text-white rounded">AGENCIA DE VIAJES</p>
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <legend class="text-center header text-light bg-dark">Reserva tu hotel</legend>
+                    <div class="form-group">
+                        <label for="nombre">Introduce tu nombre y apellidos:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="Fecha">Fecha de llegada:</label>
+                        <input type="date" name="fecha" id="fecha" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="noches">Nº de noches:</label>
+                        <input type="number" name="noches" id="noches" required min="1" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="habitaciones">Estrellas del hotel:</label>
+                        <select name="tipoHotel" id="tipoHotel" class="form-control">
+                            <option value="1">1 Estrella</option>
+                            <option value="2">2 Estrellas</option>
+                            <option value="3">3 Estrellas</option>
+                            <option value="4">4 Estrellas</option>
+                            <option value="5">5 Estrellas</option>
+                        </select>
+                    </div>
+                    <legend class="text-center header text-light bg-dark">Reserva tu vuelo</legend>
+                    <div class="form-group">
+                        <label for="ciuda">Introduce tu destino:</label>
+                        <input type="text" class="form-control" id="destino" name="destino ">
+                    </div>
+                    <div class="form-group">
+                        <label for="ida">Tipo de viaje:</label>
+                        <select name="idas" id="idas" class="form-control">
+                                <option value="ida">Ida</option>
+                                <option value="ida_vuelta">Ida y vuelta</option>
+                            </select>
+                    </div>
+                    <legend class="text-center header text-light bg-dark">Reserva tu coche</legend>
+                    <div class="form-group">
+                        <label for="dias_coche">Nº días:</label>
+                        <input type="number" name="dias_coche" id="dias_coche" required min="1" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-primary" name="boton" id="enviar" value="Enviar"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio total:</label>
+                        <input type="number" id="total" size="60px" class="form-control" readonly></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    color: rgb(58, 185, 19);
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+form {
+    text-shadow: -8px -4px 6px rgba(150, 150, 150, 0.85);
+}
+
+fieldset {
+    background-color: rgb(168, 221, 172);
+    max-width: 90%;
+    padding: 16px;
+}
+
+legend {
+    margin-bottom: 0px;
+    margin-left: 16px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 32px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: block;
+    color: #fff;
+    background-color: #000;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(90, 85, 85);
+    text-transform: uppercase;
+}

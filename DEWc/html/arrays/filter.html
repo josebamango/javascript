@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let numeros = [1, 5, 23, 4, 12, 45, 78, 8, 8.9, 10, 11, 3.4, 10.1, 84, 5];
+        let nuevos10 = numeros.filter(number => number > 10);
+        document.write("Numeros mayores que 10: " + nuevos10);
+        document.write('<hr>');
+        let originales = [4, 9, 16, 25];
+        document.write("<br>" + originales.join('-'));
+        let cuadrado = originales.map(Math.sqrt);
+        document.write('<br>' + "el cuadrado de estos numeros es: " + cuadrado);
+        document.write('<hr>');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

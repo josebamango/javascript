@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Number</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <script>
+        var numero = 11;
+        var numero2 = 9;
+        document.write(Math.log(numero) + " logaritmo <br>");
+        document.write(Math.exp(numero) + "no se <br>");
+        document.write(Math.sin(numero) + "sino <br>");
+        document.write(Math.sqrt(numero) + "raiz <br>");
+        document.write(Math.pow(numero, numero2) + "multi <br>");
+
+        var hoy = new Date();
+        document.write('Fecha completa: ' + hoy);
+        var dia_mes = hoy.getDate();
+        var dia_semana = hoy.getDay();
+        var mes = hoy.getMonth();
+        var año = hoy.getFullYear();
+        var meses = [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre",
+        ];
+        var dias = [
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sabado",
+            "Domingo",
+        ]
+        var fecha1 = hoy.toLocaleDateString();
+        var fecha2 = dias[hoy.getDay()] + (hoy.toLocaleDateString());
+        var fecha3 = dias[hoy.getDay()] + ", " + (hoy.getDate()) + " " + (meses[hoy.getMonth()]) + (" de ").concat(hoy.getFullYear());
+        document.write('<br>Dia mes: ' + dia_mes);
+        document.write('<br>Dia semana: ' + dia_semana);
+        document.write('<br>Mes: ' + mes);
+        document.write('<br>Año: ' + año);
+        document.write('<br>Fecha: ' + fecha1);
+        document.write('<br>Fecha: ' + fecha2);
+        document.write('<br>Fecha: ' + fecha3);
+
+        var fecha1 = new Date('11/02/2001');
+        var fecha2 = new Date('08/02/78');
+        var resta = fecha1 - fecha2;
+        document.write(resta);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <div class="form-group">
+                        <label for="Fecha">Introduce una fecha:</label>
+                        <input type="date" name="fecha" id="fecha" class="form-control" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var input = document.getElementById('fecha').value;
+    document.write(input);
+</script>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reserva Estancia</title>
+    <link rel="stylesheet" href="estiloHotel.css">
+</head>
+
+<body>
+    <h1>Haz tu reserva</h1>
+    <form action="#" target="" method="get" name="reserva" oninput="(precio.value=parseInt((noches.value)*100)+parseInt((habitaciones.value)*20))">
+
+        <h2>Habitaciones</h2>
+
+
+        <label for="Fecha">Fecha</label>
+        <input type="date" name="fecha" id="fecha" />
+
+        <label for="noches">Nº de noches:</label>
+        <input type="number" name="noches" id="noches" required min="1" />
+
+        <label for="habitaciones">Habitaciones:</label>
+        <input type="number" name="habitaciones" id="habitaciones" required min="1" />
+
+        <label for="precio">Precio final:</label>
+        <output name="precio" for="noches habitaciones"></output>
+
+    </form>
+    <form method="GET" name="datos" action="#">
+
+        <h2>Datos personales</h2>
+
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" id="apellido">
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" name="direccion">
+
+        <label for="cp">Codigo postal:</label>
+        <input type="number" name="cp" id="cp" required maxlength="5" minlength="5" />
+
+        <label for="ciudad">Ciudad: </label>
+        <input type="text" name="ciudad">
+
+        <label for="pais">Pais:</label>
+        <input type="text" name="pais">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" name="telefono" required maxlength="12" placeholder="Ej: 123-456789" pattern="[0-9]{3}-[0-9]{6}">
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+
+        <label for="observaciones">Observaciones:</label>
+        <textarea name="observacioness" id="observaciones" cols="50" rows="10"></textarea>
+
+        <input type="checkbox" name="cuna">Incluir cuna
+
+
+    </form>
+
+    <form action="#" method="get" name="pago">
+
+        <h2>Método de pago</h2>
+
+        <label for="tarjeta">Nº de tarjeta</label>
+        <input type="number" name="tarjeta" id="tarjeta" maxlength="18" minlength="13" required />
+
+        <label for="caducidad">Caducidad:</label>
+        <input type="date" name="caducidad" id="caducidad" required />
+
+        <label for="codigo">Código de seguridad:</label>
+        <input type="number" name="codigo" id="codigo" maxlength="3" minlength="3" />
+
+        <label for="titular">Titular de la tarjeta:</label>
+        <input type="text" name="titular" required>
+
+        <input type="checkbox" name="cuna">Acepto la politica de privacidad
+        <figure>
+            <img src="pagos.png" alt="metodos">
+        </figure>
+        <input type="submit" value="Pagar">
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        do{
+            var nombre=prompt("Introduce el nombre del primer presidente de la democracia");
+            nombre=nombre.toLowerCase();
+            var apellido=prompt("Introduce el apellido del primer presidente de la democracia");
+            apellido=apellido.toLowerCase();
+
+            switch(true){
+                case nombre!="adolfo" && apellido !="suarez":
+                    alert("ERROR, intentelo de nuevo");
+                    break;
+                case nombre=="adolfo" && apellido !="suarez":
+                    alert("Te falta el apellido");
+                    break;
+                case apellido=="suarez" && nombre !="adolfo":
+                    alert("Te falta el nombre");       
+            }
+
+        }while(nombre!="adolfo" || apellido !="suarez");
+        document.write("Acertaste");
+    </script>
+</body>
+</html>

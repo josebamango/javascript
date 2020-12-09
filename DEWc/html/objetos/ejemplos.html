@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Objetos</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <script>
+        function Alumno(nombre, curso, materias) {
+            this.nombre = nombre;
+            this.curso = curso;
+            this.materias = materias;
+        }
+
+        function beca(num) {
+            precio = 100 * this.materias;
+            descuento = precio * num / 100;
+            precioFinal = precio - descuento;
+            document.write(precioFinal);
+        }
+        alumno1 = new Alumno("Joseba", "DAW2", 5);
+        document.write(alumno1.nombre + " " + alumno1.curso + " " + alumno1.materias);
+        var direccion = "machete de mango";
+        Alumno.prototype.direccion = direccion;
+        document.write("<br>Dirección: " + alumno1.direccion);
+
+        function Calcular() {
+
+        }
+        a = 8;
+        b = 10;
+        Calcular.prototype.n1 = a;
+        Calcular.prototype.n2 = b;
+        var calculo = new Calcular();
+        document.write("<br>" + calculo.n2);
+        class Animal {
+            constructor(nombre) {
+                this.nombre = nombre;
+            }
+            get nombre() {
+                return this._nombre;
+            }
+            set nombre(nombre) {
+                this._nombre = nombre.trim();
+
+            }
+            hablar() {
+                return "<br>Que pasaaa";
+            }
+            quienSoy() {
+                return "Soy " + this._nombre + ", encarnado en forma de pato";
+            }
+        }
+        const pato = new Animal("Dios");
+        document.write(pato.hablar());
+        document.write("<br>" + pato.quienSoy());
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-primary text-white rounded">Lista de alumnos</p>
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <legend class="text-center header text-light bg-dark">Introduce al alumno</legend>
+                    <div class="form-group">
+                        <label for="nombre">Introduce tu nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="curso">Curso:</label>
+                        <input type="text" name="curso" id="curso" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="asignaturas">Nº de asignaturas:</label>
+                        <input type="number" name="asignaturas" id="asignaturas" required min="1" class="form-control" />
+                    </div>
+                    <div class="form-group d-inline">
+                        <input type="submit" name="añadir" id="añadir" value="AÑADIR" class="btn btn-primary">
+                        <input type="submit" name="mostrar" id="mostrar" value="MOSTRAR" class="btn btn-primary">
+                        <textarea name="resultado" id="resultado" cols="50" rows="5" class="form-control mt-2"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

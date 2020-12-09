@@ -1,0 +1,80 @@
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(167, 51, 122);
+}
+
+form {
+    width: 450px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    text-shadow: -8px -4px 6px rgba(150, 150, 150, 0.85);
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    width: 100px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form input[type="tel"] {
+    width: 300px;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    display: block;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 32px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: block;
+    color: #fff;
+    background-color: #000;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(90, 85, 85);
+    text-transform: uppercase;
+}
+
+form:first-of-type {
+    background-color: rgb(56, 147, 163);
+}
+
+form:nth-of-type(2) {
+    background: rgb(101, 179, 70);
+}
+
+form:nth-of-type(3) {
+    background: rgb(178, 189, 29);
+}
+
+img {
+    width: 200px;
+}

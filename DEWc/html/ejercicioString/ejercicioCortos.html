@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <script>
+        //String 1
+        var minus = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
+        var mayus = [];
+        for (i = 0; i < minus.length; i++) {
+            var primera = (minus[i].charAt(0).toLocaleUpperCase());
+            var segunda = (minus[i].charAt(minus[i].length - 1).toLocaleUpperCase());
+            document.write(primera + minus[i].slice(1, -1) + segunda + "-");
+        };
+        var poema = "Con cien cañones por banda, viento en popa a toda vela, no corta el mar si no vuela un velero bergantín. Bajel pirata que llaman el temido, en todo el mar conocido de uno a otro confín. La luna en el mar riela, y en la lona gime el viento, y alza en blando movimiento olas de plaza y azul. Y alli va el capitan pirata cantando alegre en la popa, asia a un lado, al otro Europa, y hacia su frente Estambul. Navega velero mio sin temor, que ni enemigo navio, ni tormenta ni bonanza, tu rumbo a torcer alcanza, ni a sujetar tu valor. QUE ES MI BARCO MI TESORO, QUE ES MI DIOS LA LIBERTAD, MI LEY LA FUERZA Y EL VIENTO, MI UNICA PATRIA LA MAR <br> Poema de Espronceda"
+        var palabras = poema.split(" ");
+        var reemplazo = poema.replace("MAR", "MAR.");
+        document.write("<br>" + reemplazo);
+        document.write("<br>" + palabras.length + " palabras");
+        document.write("<br>" + poema.length + " caracteres");
+        //String 2
+        do {
+            var cadena = prompt("Introduce una cadena de mas de 10 caracteres:")
+
+        } while (cadena.length < 10);
+        var octavo = cadena.charAt(7);
+        document.write("El octavo caracter es: " + octavo);
+        var primeraAparicion = cadena.indexOf(octavo);
+        document.write("<br> Aparece por primera vez en la posicion: " + primeraAparicion);
+        var ultimaAparicion = cadena.lastIndexOf(octavo);
+        document.write("<br> Aparece por ultima vez en la posicion: " + ultimaAparicion);
+        var entreMedias = cadena.substring(primeraAparicion, ultimaAparicion);
+        document.write('<br>En medio de: ' + octavo + " hay==> " + entreMedias + "<br>");
+        for (i = 0; i < entreMedias.length; i += 2) {
+            document.write(entreMedias.charAt(i).toLocaleUpperCase());
+        };
+
+        //String 3
+        var frases = prompt("Introduce un texto");
+        var puntos = frases.split(".");
+        document.write(puntos.join("<br>"));
+
+
+        document.write("<br> Hay: " + (puntos.length - 1) + " frases");
+        var palabras = frases.split(" ");
+        document.write('<br> Hay: ' + palabras.length + " palabras");
+
+
+        var fraseDeletreo = puntos[2];
+        var palabraDeletreo = fraseDeletreo.split(" ")[5];
+        document.write("<br> La frase 3 es: " + fraseDeletreo);
+        document.write('<br>La palabra 6 de la frase 3 es: ' + palabraDeletreo);
+
+        for (i = 1; i < puntos.length; i++) {
+            document.write('<br>En la frase ' + (i) + " hay: " + puntos[i].split(" ").length + " palabras <br>");
+        };
+
+        function deletreo(palabraDeletreo) {
+            var i = 0;
+            while (i < palabraDeletreo.length) {
+                document.write('La letra ' + (i + 1) + ' es : ' + palabraDeletreo.charAt(i) + '<br>');
+                i++;
+            }
+        }
+
+        function invertir(palabraDeletreo) {
+            var x = palabraDeletreo.length;
+            var palabraDeletreoInvertida = "";
+
+            while (x >= 0) {
+                palabraDeletreoInvertida = palabraDeletreoInvertida + palabraDeletreo.charAt(x);
+                x--;
+            }
+            document.write('La palabra invertida queda asi: ' + palabraDeletreoInvertida);
+        }
+        deletreo(palabraDeletreo);
+        invertir(palabraDeletreo);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

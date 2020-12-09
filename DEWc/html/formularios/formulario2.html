@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estiloForm.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Preferencias gastronomicas</h1>
+
+    <form action="http://pagina.com/send.php" target="" method="get" name="formDatosCulinarios">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" />
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" id="apellidos" placeholder="1r Apellido" title="Tamaño minimo: 5. Tamaño maximo 50" />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="email" required />
+
+        <label for="aficiones">Preferencias culinarias:</label><br>
+        <input type="checkbox" value="Italiana" name="comida">Italiana
+        <input type="checkbox" value="Francesa" name="comida">Francesa
+        <input type="checkbox" value="Española" name="comida">Española
+        <label for="edad">Edad:</label> <br>
+        <input type="radio" value="12-17" name="edad"> 12-17
+        <input type="radio" value="18-35" name="edad"> 18-35
+        <input type="radio" value="36-65" name="edad"> 36-65
+        <label for="coche">Modelo de coche</label>
+        <input type="text" name="coche" required pattern="A|a(1|3|4|15)">
+
+
+        <label for="comidas">Comidas nacionales</label>
+        <select>
+  
+<optgroup label="Italiana"> 
+    
+              <option>Spaguetti</option>
+        
+              <option>Pizza</option>
+        
+              <option>Calzzone</option>
+        
+            </optgroup>
+        
+            <optgroup label="Española">
+        
+              <option>Callos</option>
+        
+              <option>Paella</option>
+              
+              <option>Rabas</option>
+        
+            </optgroup>
+        
+          </select>
+        <input type="submit" name="enviar" value="enviar datos" />
+    </form>
+</body>
+
+</html>

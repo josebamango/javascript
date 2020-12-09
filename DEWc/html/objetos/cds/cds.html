@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>CDs</title>
+    <link rel='stylesheet' href='bootstrap-4.5.3-dist\css/bootstrap.min.css'>
+    <script src="claseCD.js"></script>
+    <script src="creacionCD.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-danger text-white rounded">Lista musical</p>
+                <form action=" " method="POST " class="border border-warning p-2 mb-5 rounded">
+                    <legend class="text-center header text-warning bg-dark">Introduce el disco</legend>
+                    <div class="form-group">
+                        <label for="titulo">Introduce el titulo:</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo">
+                    </div>
+                    <div class="form-group">
+                        <label for="grupo">Grupo:</label>
+                        <input type="text" name="grupo" id="grupo" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de salida:</label>
+                        <input type="date" name="fecha" id="fecha" class="form-control" />
+                    </div>
+                    <div class="form-group d-inline">
+                        <input type="button" name="añadir" id="añadir" value="AÑADIR" class="btn btn-warning">
+                        <input type="button" name="mostrar" id="mostrar" value="MOSTRAR" class="btn btn-warning">
+                        <textarea name="resultado" id="resultado" cols="50" rows="5" class="form-control mt-2 bg-dark text-light"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

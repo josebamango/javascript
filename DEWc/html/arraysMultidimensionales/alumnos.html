@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Alumnos</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <script>
+        var alumnos = [
+            ["Ernesto", 10, 10, 6],
+            ["Daniel", 9, 10, 9],
+            ["Javier", 9, 4, 6],
+            ["Maria", 3, 3, 6],
+            ["Julián", 9, 8, 9],
+            ["Brenda", 10, 4, 8],
+            ["Lorena", 9, 7, 1],
+            ["Carolina", 7, 10, 6]
+        ];
+
+        function mostrarAlumnos(alumnos) {
+            document.write('Alumnos: <br>' + alumnos.join("<br>"));
+        }
+
+        function calcularMedia(alumnos) {
+            //Media de cada alumno
+            mediaAlumno = 0;
+            //Donde se almacenan las notas medias de los alumnos
+            notasAlumnos = [];
+            for (var i = 0; i < alumnos.length; i++) {
+                for (var j = 1; j < alumnos[i].length; j++) {
+                    mediaAlumno += alumnos[i][j];
+                }
+                result = mediaAlumno / (alumnos[i].length - 1);
+                result = result.toFixed(2);
+                notasAlumnos.push(result);
+                mediaAlumno = 0;
+            }
+
+            document.write('<br><br>Las medias de cada alumno son: <br><br>' + notasAlumnos.join("<br>"));
+        }
+
+        function calcularEva(alumnos) {
+            mediaEva = 0;
+            mediasEval = [];
+            aux = 1;
+            for (i = 1; i < alumnos[aux].length; i++) {
+                for (j = 0; j < alumnos.length; j++) {
+                    mediaEva += alumnos[j][i];
+
+                };
+                aux++;
+                result = mediaEva / (alumnos.length);
+                result = result.toFixed(2);
+                mediasEval.push(result);
+                mediaEva = 0;
+            };
+            document.write('<br><br>Las medias de cada evaluación son: <br><br>' + mediasEval.join("<br>"));
+        }
+
+        function buscarAlumnos(alumnos) {
+            var nombre = document.getElementById('nombre');
+            for (i = 0; i < alumnos.length; i++) {
+                for (j = 0; j < alumnos[i].length; j++) {
+
+                };
+            };
+
+        }
+
+        mostrarAlumnos(alumnos);
+        calcularMedia(alumnos);
+        calcularEva(alumnos);
+        buscarAlumnos(alumnos);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-danger text-white rounded">CLASE</p>
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <legend class="text-center header text-dark bg-warning ">Busca tu alumno</legend>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <input type="button" name="mostrar" id="bucar" value="BUSCAR" class="btn btn-primary">
+                    <div class="form-group">
+                        <label for="resultado">Resultado:</label>
+                        <input type="text" class="form-control" id="resultado" name="resultado" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

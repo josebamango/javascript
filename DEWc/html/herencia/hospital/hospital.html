@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Hospital</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <script src="habitaciones.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <table class="table mb-2">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nº</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">7</th>
+                            <th scope="col">8</th>
+                            <th scope="col">9</th>
+                            <th scope="col">10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <legend class="text-center header text-light bg-dark">Habitaciones</legend>
+                            <th scope="row">Estado</th>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                            <td><img style="width: 25px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <legend class="text-center header text-light bg-dark">Introduce tu DNI</legend>
+                    <div class="form-group">
+                        <label for="dni">DNI:</label>
+                        <input type="text" class="form-control" id="dni" name="dni">
+                    </div>
+                    <div class="form-group">
+                        <input type="button" name="alta" id="alta" value="ASIGNAR PACIENTE" class="btn btn-danger">
+                    </div>
+                    <div class="form-group">
+                        <label for="tratamientos">Tratamientos:</label><br>
+                        <label><input type="checkbox" name="tratamiento" value="sana"> Sana ranita</label>
+                        <label><input type="checkbox" name="tratamiento" value="rezar"> Rezar a diosito</label>
+                        <label><input type="checkbox" name="tratamiento" value="cama"> Descansar en cama</label><br>
+                        <label><input type="checkbox" name="tratamiento" value="acupuntura"> Acupuntura</label>
+                        <label><input type="checkbox" name="tratamiento" value="chakras"> Liberar los chakras</label>
+                        <label><input type="checkbox" name="tratamiento" value="ayahuasca"> Fumar ayahuasca</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="button" name="addTratamientos" id="addTratamientos" value="AÑADIR TRATAMIENTO" class="btn btn-success">
+                        <input type="button" name="liberar" id="liberar" value="LIBERAR HABITACION" class="btn btn-warning mt-2">
+                        <input type="button" name="mostrar" id="mostrar" value="MOSTRAR" class="btn btn-secondary mt-2">
+                        <textarea name="dadoAlta" id="dadoAlta" cols="5" rows="2" class="form-control mt-2"></textarea>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <script>
+        do {
+            var numero = prompt("Introduce un número");
+
+        } while (isNaN(numero));
+
+        switch (true) {
+            case numero >= 0 && numero <= 10:
+                alert('El numero: ' + numero + ' esta comprendido \n entre 0 y 10!!');
+                break;
+            case numero > 10 && numero <= 20:
+                alert('El numero: ' + numero + ' esta comprendido \n entre 10 y 20!!');
+                break;
+            case numero > 100 || numero < 0:
+                alert('Demasiado poco o mucho!');
+                break;
+            default:
+                alert('NINGUNO');
+        }
+    </script>
+</body>
+
+</html>
