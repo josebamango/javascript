@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Viaje Joseba</title>
+    <script src="viaje.js"></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-primary text-white rounded">AGENCIA DE VIAJES</p>
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <legend class="text-center header text-light bg-dark">Reserva tu hotel</legend>
+                    <div class="form-group">
+                        <label for="salida">Lugar de salida:</label>
+                        <select name="salida" id="salida" class="form-control">
+                            <option value="0">San Pedro del Romeral</option>
+                            <option value="1">Santander</option>
+                            <option value="2">Torrelavega</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="llegada">Lugar de llegada:</label>
+                        <select name="llegada" id="llegada" class="form-control">
+                            <option value="0">Roma</option>
+                            <option value="1">París</option>
+                            <option value="2">Londres</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="trasporte">Tipo de trasporte:</label> <input type="radio" id="avion" name="trasporte" class="form-check d-inline mt-2" value="avion"> Avión <input type="radio" id="tren" name="trasporte" class="form-check d-inline"
+                            value="tren"> Tren <input type="radio" id="autobus" name="trasporte" class="form-check d-inline" value="autobus"> Autobús
+                    </div>
+                    <input type="button" name="mostrar" id="mostrar" class="btn btn-primary" value="MOSTRAR VIAJE">
+                    <input type="button" name="tabla" id="tabla" class="btn btn-primary" value="MOSTRAR TABLA">
+                </form>
+                <label id="resultado"></label>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

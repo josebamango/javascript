@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+    <!-- Los ticks ✅ es que está libre la habitación, las cruces ❌ que no -->
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-6">
@@ -48,33 +50,27 @@
                         </tr>
                     </tbody>
                 </table>
-                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
-                    <legend class="text-center header text-light bg-dark">Introduce tu DNI</legend>
-                    <div class="form-group">
-                        <label for="dni">DNI:</label>
-                        <input type="text" class="form-control" id="dni" name="dni">
-                    </div>
-                    <div class="form-group">
-                        <input type="button" name="alta" id="alta" value="ASIGNAR PACIENTE" class="btn btn-danger">
-                    </div>
-                    <div class="form-group">
-                        <label for="tratamientos">Tratamientos:</label><br>
-                        <label><input type="checkbox" name="tratamiento" value="sana"> Sana ranita</label>
-                        <label><input type="checkbox" name="tratamiento" value="rezar"> Rezar a diosito</label>
-                        <label><input type="checkbox" name="tratamiento" value="cama"> Descansar en cama</label><br>
-                        <label><input type="checkbox" name="tratamiento" value="acupuntura"> Acupuntura</label>
-                        <label><input type="checkbox" name="tratamiento" value="chakras"> Liberar los chakras</label>
-                        <label><input type="checkbox" name="tratamiento" value="ayahuasca"> Fumar ayahuasca</label>
-                    </div>
+                <div class="form-group">
+                    <input type="button" id="addHabitacion" value="Asignar habitacion" class="btn btn-primary">
+                    <input type="button" id="liberar" value="Liberar habitacion" class="btn btn-success offset-5">
+                </div>
 
-                    <div class="form-group">
-                        <input type="button" name="addTratamientos" id="addTratamientos" value="AÑADIR TRATAMIENTO" class="btn btn-success">
-                        <input type="button" name="liberar" id="liberar" value="LIBERAR HABITACION" class="btn btn-warning mt-2">
-                        <input type="button" name="mostrar" id="mostrar" value="MOSTRAR" class="btn btn-secondary mt-2">
-                        <textarea name="dadoAlta" id="dadoAlta" cols="5" rows="2" class="form-control mt-2"></textarea>
-                    </div>
-                </form>
+                <div class="form-group">
+                    <label for="tratamientos">Tratamientos:</label><br>
+                    <label><input type="checkbox" name="tratamientos" value="Sana ranita"> Sana ranita</label>
+                    <label><input type="checkbox" name="tratamientos" value="Rezar a diosito"> Rezar a diosito</label>
+                    <label><input type="checkbox" name="tratamientos" value="Descansar en cama"> Descansar en cama</label><br>
+                    <label><input type="checkbox" name="tratamientos" value="Acupuntura"> Acupuntura</label>
+                    <label><input type="checkbox" name="tratamientos" value="Liberar los chakras"> Liberar los chakras</label>
+                    <label><input type="checkbox" name="tratamientos" value="Fumar ayahuasca"> Fumar ayahuasca</label>
+                    <input type="button" id="aplicar" value="Aplicar tratamiento" class="btn btn-warning offset-4">
+                </div>
 
+                <div class="form-gorup">
+                    <input type="button" id="mostrarInfo" value="Mostrar Informacion" class="btn btn-secondary mb-2">
+                    <input type="text" id="numeroHabitacion" placeholder="Elige habitación para visualizar" style="width: 250px;">
+                    <textarea id="resultado" cols="30" rows="10" readonly class="form-control"></textarea>
+                </div>
 
             </div>
         </div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Miguel Herrero</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+    <script src="empleado.js"></script>
+    <script src="main.js"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <legend class="text-center header text-light bg-dark">Empleados</legend>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" class="form-control">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" class="form-control">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" class="form-control">
+                    <label for="salario">Salario:</label>
+                    <input type="number" id="salario" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="casado">Casado:</label>
+                    <input type="radio" id="si" name="casado" class="form-check d-inline mt-2" value="si"> Si
+                    <input type="radio" id="no" name="casado" class="form-check d-inline" value="no"> NO
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de empleado:</label>
+                    <input type="radio" id="pro" name="tipo" class="form-check d-inline mt-2" value="programador" onclick="ocultar()"> Programador
+                    <input type="radio" id="ana" name="tipo" class="form-check d-inline" value="analista" onclick="ocultar()"> Analista
+                </div>
+                <div class="programador" id="programador" style="visibility:hidden">
+                    <div class="form-group">
+                        <legend class="text-center header text-light bg-dark mt-2">Datos del programador</legend>
+                        <label for="lenguaje">Lenguaje:</label>
+                        <input type="text" id="lenguaje" class="form-control">
+                        <label for="lineas">Lineas:</label>
+                        <input type="text" id="lineas" class="form-control">
+                    </div>
+                </div>
+                <div class="analista" id="analista" style="visibility:hidden">
+                    <div class="form-group">
+                        <legend class="text-center header text-light bg-dark mt-2">Datos del analista</legend>
+                        <label for="lenguaje">Descripción del proyecto:</label>
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="button" id="alta" value="Dar de alta" class="btn btn-primary mb-2">
+                    <input type="button" id="mostrar" value="Mostrar datos" class="btn btn-warning mb-2">
+                    <textarea id="resultado" cols="30" rows="10" readonly class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>

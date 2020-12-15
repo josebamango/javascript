@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<script>
+
+		
+		// --- FECHA ACTUAL
+
+			var fechaActual = new Date();
+
+		// --- VARIAS MANERAS DE FORMATEAR LA FECHA
+
+			cumpleanos = new Date("December 17, 1995 03:24:00");
+			var cumpleanos = new Date('2019-12-30');
+			cumpleanos = new Date(1995,11,17,3,24,0);
+
+		// --- SACAR HORAS, MINUTOS, SEGUNDOS, ETC...
+
+			fechaActual.getHours() //Reloj 24 horas 
+			fechaActual.getMinutes() //Reloj minutos
+			fechaActual.getSeconds() //Reloj segundos
+			fechaActual.getDay() //Reloj día Semana (Número), empieza en domingo con 0
+			fechaActual.getDate() //Reloj día del mes
+			fechaActual.getMonth() //Reloj mes (número)
+			fechaActual.getFullYear() //Año
+
+
+		// --- DIFERENCIA EN DÍAS ENTRE DOS FECHAS
+
+			var fechaInicio = new Date('2019-01-31');
+			var fechaFin    = new Date();
+
+			var diff = fechaFin - fechaInicio;
+
+			console.log(Math.floor(diff/(1000*60*60*24)) );
+			console.log(Math.floor(diff/(1000*60*60*24)) );
+		                 // (1000*60*60*24) --> milisegundos -> segundos -> minutos -> horas -> días
+
+		// --- DIFERENCIA EN MESES ENTRE DOS FECHAS
+
+		    function monthDiff(d1, d2) {
+			    var months;
+			    months = (d2.getFullYear() - d1.getFullYear()) * 12;
+			    months -= d1.getMonth() ;//+ 1;
+			    months += d2.getMonth();
+			    return months <= 0 ? 0 : months;
+			}
+
+			var ejemploFecha = monthDiff(fechaInicio, fechaFin);
+
+			console.log("ejemploFecha");
+			console.log(ejemploFecha);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

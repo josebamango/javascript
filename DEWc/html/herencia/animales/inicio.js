@@ -31,7 +31,7 @@ function mostrarVacas(array) {
         parseInt(array[i].ordeñar(litros.value));
         //parseInt(array[i].otraVictima(victimas.value));
         texto += "El animal es un/a: " + array[i].nombre + ", de la especie de los " +
-            array[i].especie + ", tiene " + array[i].numeroPatas + " patas, y " + array[i].cola + " tiene cola" + ".\n";
+            array[i].especie + ", tiene " + array[i].numeroPatas + " patas, y " + array[i].cola + " tiene cola." + ".\n";
     }
     return texto;
 }
