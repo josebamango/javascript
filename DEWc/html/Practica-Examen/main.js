@@ -18,9 +18,12 @@ function inicio() {
     var mostrar = document.getElementById("mostrar");
     var principiantes = document.getElementById('principiantes');
     var resultado = document.getElementById("resultado");
-    //ESTO ES PARA HACER LAS HIJAS CON HERENCIA 
+    //ESTO ES PARA HACER LAS HIJAS CON HERENCIA PERO SE VE QUE ERA MENTIRA, SI NO HACES CALL PUES SI PUTO
     /*   Programador.prototype = new Empleado();
       Analista.prototype = new Empleado(); */
+    Analista.prototype.vaina = function() {
+        this.edad = 17;
+    }
     alta.addEventListener('click', function() {
         var estadoCivil;
         for (i = 0; i < casado.length; i++) {
@@ -34,10 +37,13 @@ function inicio() {
         } else {
             var arrayProyectos = descripcion.value.split("-");
             a1 = new Analista(nombre.value, dni.value, edad.value, estadoCivil, salario.value, arrayProyectos);
+            a1.vaina();
             arrayAnalistas.push(a1);
         }
 
     }, false);
+
+
 
     principiantes.addEventListener('click', function() {
         mostrarPrincipiante(arrayAnalistas, resultado);
@@ -47,9 +53,6 @@ function inicio() {
     mostrar.addEventListener('click', function() {
         visualizarAnalistas(arrayAnalistas);
     }, false);
-
-
-
 
 }
 
