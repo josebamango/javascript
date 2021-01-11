@@ -25,7 +25,7 @@ function mostrarTaxis(array) {
     var texto = "";
     for (var i = 0; i < array.length; i++) {
         parseInt(array[i].variarCarga(50));
-        parseInt(array[i].variarVelocidad(50));
+        parseInt(array[i].variarVelocidad(500));
         texto += "El taxi: " + array[i].tipoMotor + " tiene capacidad para  " +
             array[i].numeroPasajeros + ", puede llevar " + array[i].carga + "kg de carga, y alcanza los " + array[i].velocidad + " km por hora" + ".\n";
     }
